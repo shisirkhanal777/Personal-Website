@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/vision", label: "Vision" },
-    { href: "/media", label: "Media" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Home", labelNp: "घर" },
+    { href: "/about", label: "About", labelNp: "परिचय" },
+    { href: "/vision", label: "Vision", labelNp: "दृष्टिकोण" },
+    { href: "/media", label: "Media", labelNp: "सञ्चार" },
+    { href: "/contact", label: "Contact", labelNp: "सम्पर्क" },
   ];
 
   return (
@@ -27,7 +28,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -37,6 +38,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <LanguageToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,6 +79,9 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <div className="px-2 pt-2">
+                <LanguageToggle />
+              </div>
             </div>
           </div>
         )}
