@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # local
     "core",
+    "health",
 ]
 
 MIDDLEWARE = [
