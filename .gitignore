@@ -1,0 +1,32 @@
+.venv
+.env
+# Python / Django
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.sqlite3
+/static/
+media/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-error.log*
+.env.local
+.env.development.local
+.env.production.local
+
+# Docker
+*.log
+*.pid
+docker-compose.override.yml
+
+# IDEs / OS
+.vscode/
+.idea/
+.DS_Store
+*~
