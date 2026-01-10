@@ -66,6 +66,9 @@ The standard Django Admin interface.
 - **Method:** `GET`
 - **Auth Required:** Yes (Superuser/Staff)
 
+#### Editable Models
+- **Profiles** (`profiles.Profiles`)
+
 ### 3. Static Files
 
 Served in development mode (DEBUG=True) via Django.

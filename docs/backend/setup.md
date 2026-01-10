@@ -55,11 +55,17 @@ POSTGRES_PORT=5432
    python manage.py migrate
    ```
 
-5. **Run the development server:**
+5. **Create a superuser:**
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+6. **Run the development server:**
    ```bash
    python manage.py runserver
    ```
    The API will be available at `http://localhost:8000`.
+   The Admin Panel will be available at `http://localhost:8000/admin/`.
 
 ## Docker Setup
 
